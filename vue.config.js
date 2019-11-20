@@ -7,7 +7,7 @@ module.exports = {
   // https://www.foobar.com/my-app/
   // 那么将这个值改为 `/my-app/`
   // eslint-disable-next-line no-irregular-whitespace
-  publicPath: '/plugIn/',　　/* 这个是我存放在github在线预览的项目 */
+  publicPath: "/plugIn/",
 
   // 将构建好的文件输出到哪里
   outputDir: 'dist',
@@ -94,8 +94,8 @@ module.exports = {
     https: false,
     hotOnly: false,
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
-    proxy: null, // string | Object
-    before: app => {}
+    proxy: null // string | Object
+    // before: app => {}
   },
 
   // 三方插件的选项

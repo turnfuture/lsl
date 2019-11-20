@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Index from '../views/Index.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index,
+    component: () => import('../views/Index.vue'),
     meta: {
       title: '首页'
     }
@@ -18,6 +17,27 @@ const routes = [
     component: () => import('../views/Sass.vue'),
     meta: {
       title: 'Sass'
+    }
+  }, {
+    path: '/js',
+    name: 'js',
+    component: () => import('../views/js/index.vue'),
+    meta: {
+      title: 'js汇总'
+    }
+  }, {
+    path: '/vue',
+    name: 'vue',
+    component: () => import('../views/vue/index.vue'),
+    meta: {
+      title: 'vue汇总'
+    }
+  }, {
+    path: '/html',
+    name: 'html5s',
+    component: () => import('../views/html5/index.vue'),
+    meta: {
+      title: 'html4'
     }
   }
 ]

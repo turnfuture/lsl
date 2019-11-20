@@ -1,1 +1,151 @@
+// 颜色
+$headerBg: rgb(223, 250, 170);
 $main-color: #f90;
+$fff: #fff;
+$black: #333;
+$middle-black: #666;
+$grey: #999;
+
+$p20: 20px;
+$p15: 15px;
+$p10: 10px;
+$p0: 0;
+
+// 默认样式
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 15px;
+    line-height: 1.5em;
+}
+
+p {
+    font-size: 14px;
+}
+
+p.none {
+    margin: 0;
+}
+
+p.ti {
+    text-indent: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:focus {
+    outline: none;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        list-style-image: none;
+    }
+}
+
+body {
+    margin: 0;
+    background: #f9f9f9;
+}
+
+// 内容区域
+.container {
+    margin: 72px auto 0;
+    max-width: 997px;
+}
+
+.bg-black p::selection {
+    color: #FFFFFF;
+    background-color: orange;
+    text-shadow: none;
+}
+
+.bg-black p::-moz-selection {
+    color: #FFFFFF;
+    background-color: orange;
+    text-shadow: none;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+// ::-webkit-scrollbar {
+//     width: 10px;
+//     height: 10px;
+//     background-color: #F5F5F5;
+// }
+
+// /*定义滚动条轨道 内阴影+圆角*/
+// ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//     border-radius: 5px;
+//     background-color: #F5F5F5;
+// }
+
+// /*定义滑块 内阴影+圆角*/
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 5px;
+//     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+//     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+//     background-color: #555;
+// }
+
+/* 箭头 */
+.right-arrow {
+    width: 15px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.right-arrow::after {
+    display: inline-block;
+    content: " ";
+    height: 10px;
+    width: 10px;
+    border-width: 2px 2px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    margin-top: 3px;
+}
+
+// 上下箭头
+.down-arrow {
+    width: 15px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.down-arrow::after {
+    display: inline-block;
+    content: " ";
+    height: 10px;
+    width: 10px;
+    border-width: 0 2px 2px 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform-origin: center;
+    transition: transform .3s;
+    position: relative;
+    top: -3px;
+}
+
+// 加上active旋转成 上箭头
+.down-arrow.active::after {
+    transform-origin: center;
+    transform: rotate(-135deg);
+    transition: transform .3s;
+}
